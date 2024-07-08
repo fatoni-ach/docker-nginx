@@ -1,0 +1,8 @@
+Codes/*
+
+nginx/logs/*
+php-fpm/php.log
+
+.env
+nginx/conf/*
+!nginx/conf/example-ci.conf
