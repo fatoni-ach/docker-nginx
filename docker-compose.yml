@@ -18,6 +18,18 @@ services:
       - ${NGINX_DIRECTORY}:/var/www/html
       - ./php-fpm/php.log:/var/log/fpm-php.www.log
 
+  mysql:
+    build: mysql
+    ports:
+    - "3306:3306"
+    volumes:
+    - ${DB_DIRECTORY}:/var/lib/mysql
+    networks: 
+      - internal
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_MYSQL_ROOT_PASSWORD}
+      MYSQL_USER: ${DB_MYSQL_USER}
+      MYSQL_PASSWORD: ${DB_MYSQL_PASSWORD}
 
 networks:
   internal:
