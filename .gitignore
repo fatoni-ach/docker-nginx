@@ -7,3 +7,4 @@ php-fpm/php.log
 nginx/conf/*
 !nginx/conf/example-ci.conf
 mysql/data/*
+minio/data/*
