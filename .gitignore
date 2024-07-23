@@ -6,5 +6,6 @@ php-fpm/php.log
 .env
 nginx/conf/*
 !nginx/conf/example-ci.conf
+!nginx/conf/example-reverse-proxy.com.conf
 mysql/data/*
 minio/data/*
