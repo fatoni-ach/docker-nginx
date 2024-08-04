@@ -1,5 +1,7 @@
 FROM php:8.2-fpm-alpine
 
+RUN echo 'memory_limit = 512M' >> /usr/local/etc/php/conf.d/docker-php-memlimit.ini;
+
 RUN apk add icu-dev
 RUN apk add zlib-dev
 RUN apk add libpng-dev
